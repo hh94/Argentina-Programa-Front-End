@@ -39,28 +39,28 @@
 .item8 { grid-area: art7;}
 .item9 { grid-area: art8;}
 
+
 .containerColumn {
   display: grid;
   grid-template-areas:
-      'aside art1 art5'
-      'aside art2 art6'
-      'aside art3 art7'
-      'aside art4 art8';
+      'aside art1 art5 art5 art5'
+      'aside art2 art6 art6 art6'
+      'aside art3 art7 art7 art7'
+      'aside art4 art8 art8 art8';
   gap: 10px 0px;
   background-color: rgb(213, 213, 213);
-  margin: 0% 0% 0% 2%;
+  margin: 0% 4% 0% 2%;
 }
 
 .containerColumn > div{
   background-color: #f1f1f1;
-  margin: 0% 6% 0% 0%;
   padding: 15px;
   border-radius: 2px;
 }
 .containerColumn > h2{
   background-color: #f1f1f1;
   margin: 0% 0% 0% 3%;
-  padding: 15px;
+  padding: 35px;
 }
 .containerColumn>div>h1,h2{
   text-align: center;
