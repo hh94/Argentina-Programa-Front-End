@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: rgb(213, 213, 213);
+    color: rgb(18, 18, 18);
+    font-family: 'Open Sans', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+  }

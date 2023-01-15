@@ -1,0 +1,106 @@
+<!----------barra menu--------------------------------------------------------------------------------->
+<div class="icon-bar">
+    <div>
+        <a href="#">
+            <img [src]="miPortafolio.logo" alt="logo" class="inicio" style="vertical-align: top;">
+            #YoProgramo
+        </a>
+    </div>
+
+    <div class="RI">
+        <a href="#" onclick="document.getElementById('id01').style.display='block';  return false;" style="width:auto;"><i class="bi bi-box-arrow-in-right" title="Ingresar"></i></a> 
+        <!-- <a href="#" title="Salir"><i class="bi bi-box-arrow-in-left"></i></a> -->
+        <a href="#" onclick="document.getElementById('id02').style.display='block';  return false;" style="width:auto;" title="Registrar"><i class="bi bi-r-square"></i></a>
+    </div>
+</div>
+
+<!----------modal login--------------------------------------------------------------------------------->
+
+<div id="id01" class="modal" style="z-index: 5;">
+    <form class="modal-content animate" action="/action_page.php">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="./assets/img/usuario.png" alt="Avatar" class="avatar">
+        </div>
+        <div class="container">
+            <div class="row">
+                <h2 style="text-align:center">Ingresar con red social o manualmente</h2>
+                <div class="vl">
+                <span class="vl-innertext">o</span>
+                </div>
+        
+                <div class="col">
+                    <a href="#" class="fb btn">
+                        <i class="fa fa-facebook fa-fw"></i> Ingresar con Facebook
+                    </a>
+                    <a href="#" class="twitter btn">
+                        <i class="fa fa-twitter fa-fw"></i> Ingresar con Twitter
+                    </a>
+                    <a href="#" class="google btn"><i class="fa fa-google fa-fw">
+                        </i> Ingresar con Google+
+                    </a>
+                </div>
+        
+                <div class="col">
+                    <div class="hide-md-lg">
+                        <p>O manualmente:</p>
+                    </div>
+            
+                    <input type="text" name="Nombre de usuario" placeholder="Nombre de usuario" required>
+                    <input type="password" name="Contraseña" placeholder="Contraseña" required>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Recuerdame
+                    </label>
+                </div>
+                
+            </div>
+            
+    
+            <div class="clearfix"   style="margin: 20px 50px;">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn signupbtn">Cancelar</button>
+                <button type="submit" class="signupbtn" >Ingresar</button>
+            </div>
+            
+            <p class="signin"  onclick="document.getElementById('id01').style.display='none'">No tiene cuenta? <a href="#" onclick="document.getElementById('id02').style.display='block';  return false;">Registrarse</a>.</p>
+        </div>
+    </form>
+</div>
+
+<!----------modal----registrar----------------------------------------------------------------------------->
+<div id="id02" class="modal">
+    <form class="modal-content animate" action="/action_page.php">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+        </div>
+        <div class="container">
+            
+            <div style="margin: 0px 30px;">
+                <h1>Registrar</h1>
+                <p>Por favor llenar este formulario para crear una cuenta.</p>
+                <hr>
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Ingrese Email" name="email" required>
+        
+                <label for="psw"><b>Contraseña</b></label>
+                <input type="password" placeholder="Ingrese Contraseña" name="psw" required>
+        
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repita Contraseña" name="psw-repeat" required>
+            
+            
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Recuerdame
+            </label>
+            <p>Al crear la cuenta esta de acuerdo con los <a href="#" style="color:dodgerblue" >Termino & Condiciones</a>.</p>
+        
+         </div>
+
+            <div class="clearfix"  style="margin: 0px 30px;">
+                <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn signupbtn">Cancelar</button>
+                <button type="submit" class="signupbtn">Registrar</button>
+            </div>
+            <p class="signin"  onclick="document.getElementById('id02').style.display='none'">Ya tiene cuenta? <a href="#" onclick="document.getElementById('id01').style.display='block';  return false;">Ingresar</a>.</p>
+        </div>
+    </form>
+</div>
+

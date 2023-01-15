@@ -1,0 +1,68 @@
+
+  
+  /*-------------------------------------------------------------------------------Top-End-------------------------------------------------------------------------------------*/
+
+  .btn-mov{
+    position: fixed;
+    z-index: 2;
+    cursor: pointer;
+    box-shadow: 0 0 15px #666666b9;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: rgba(251, 251, 251, 0.336);
+    color: #000;
+  }
+  .btn-mov:active {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.686);
+    transform: translateY(4px);
+    color: #f1f1f1;
+  }
+  .btn-mov:hover {
+    background-color: rgba(0, 0, 0, 0.174);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.741);
+  }
+
+  .contenedorTB{
+    margin:  0% 3% 1% 8%;
+    font-size: 20px;
+}
+
+  /*------------------------------------------------------------------------contenido-------------------------------------------------------------------------*/
+
+.item1 { grid-area: aside;}
+.item2 { grid-area: art1;}
+.item3 { grid-area: art2;}
+.item4 { grid-area: art3;}
+.item5 { grid-area: art4;}
+.item6 { grid-area: art5;}
+.item7 { grid-area: art6;}
+.item8 { grid-area: art7;}
+.item9 { grid-area: art8;}
+
+.containerColumn {
+  display: grid;
+  grid-template-areas:
+      'aside art1 art5'
+      'aside art2 art6'
+      'aside art3 art7'
+      'aside art4 art8';
+  gap: 10px 0px;
+  background-color: rgb(213, 213, 213);
+  margin: 0% 0% 0% 2%;
+}
+
+.containerColumn > div{
+  background-color: #f1f1f1;
+  margin: 0% 6% 0% 0%;
+  padding: 15px;
+  border-radius: 2px;
+}
+.containerColumn > h2{
+  background-color: #f1f1f1;
+  margin: 0% 0% 0% 3%;
+  padding: 15px;
+}
+.containerColumn>div>h1,h2{
+  text-align: center;
+  border-radius: 2px;
+}
