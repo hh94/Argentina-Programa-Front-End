@@ -9,6 +9,10 @@ import { PortafolioService } from 'src/app/servicios/portafolio.service';
 
 export class CuerpoComponent implements OnInit {
   miPortafolio:any;
+  certificadoList:any;
+  otrosConocimientosList:any;
+  proyectosList:any;
+  futurosProyectosList:any;
   
     constructor(private datosPortafolio:PortafolioService) { }
   
@@ -17,6 +21,10 @@ export class CuerpoComponent implements OnInit {
       this.datosPortafolio.obtenerDatos().subscribe(data=> {
           console.log(data);
           this.miPortafolio=data;
+          this.certificadoList=data.certificados;
+          this.otrosConocimientosList=data.otrosConocimientos;
+          this.proyectosList=data.proyectos;
+          this.futurosProyectosList=data.futurosProyectos;
       });
     }
   }

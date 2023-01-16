@@ -52,17 +52,26 @@
   margin: 0% 4% 0% 2%;
 }
 
-.containerColumn > div{
+.containerColumn > div,h1,h2,h3{
   background-color: #f1f1f1;
-  padding: 15px;
-  border-radius: 2px;
+  border-radius: 3px;
+  padding: 5px 0px;
 }
-.containerColumn > h2{
+.containerColumn > div>h1,h2,h3{
+  text-align: center;
+}
+.containerColumn > h3{
   background-color: #f1f1f1;
   margin: 0% 0% 0% 3%;
   padding: 35px;
 }
-.containerColumn>div>h1,h2{
-  text-align: center;
-  border-radius: 2px;
+img{
+  width: 70px;
+  height: 70px;
+  float: left;
+  margin-right: 10px;
+}
+
+dt>p{
+  font-size: 20px;
 }

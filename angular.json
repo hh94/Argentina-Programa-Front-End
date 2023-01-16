@@ -23,12 +23,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+              "src/styles.css"
             ],
-            "scripts": [
-              "src/assets/codigo.js"
-            ]
+            "scripts": ["./node_modules/angular-dark-mode/angular-dark-mode.js"]
           },
           "configurations": {
             "production": {
@@ -93,12 +90,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+              "src/styles.css"
             ],
-            "scripts": [
-              "src/assets/codigo.js"
-            ]
+            "scripts": ["./node_modules/angular-dark-mode/angular-dark-mode.js"]
           }
         }
       }

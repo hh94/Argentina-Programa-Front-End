@@ -13,3 +13,4 @@ export class PortafolioService {
       return this.http.get('./assets/data.json');
     }
 }
+

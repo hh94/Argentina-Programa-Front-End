@@ -7,9 +7,56 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
 <body>
   <app-root></app-root>
+
+<script>
   
+//-------------------------------------------------------js-------------------------------------------->
+  // cierra cuando clikea fuera de la ventana
+  window.addEventListener("click", function(event) {
+  // Get the modal
+  var modal = document.getElementById('id01');
+  var modal2 = document.getElementById('id02');
+      if (event.target == modal || event.target == modal2 ) {
+          modal.style.display = "none";
+          modal2.style.display = "none";
+      }
+  })
+
+//--------------------------------------------------password-------------------------------------------------
+    function myFunction() {
+      var x = document.getElementById("myInput");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+
+    function myFunction1() {
+      var x = document.getElementById("myInput1");
+      var x2 = document.getElementById("myInput2");
+      if (x.type === "password") {
+        x.type = "text";
+        x2.type = "text";
+      } else {
+        x.type = "password";
+        x2.type = "password";
+      }
+    }
+
+//------------------------------------------------limpiar-----------------------------------------------
+  function limpiarFormulario() {
+    document.getElementById("miForm").reset();
+    document.getElementById("miForm1").reset();
+  }    
+
+
+</script>
+
 </body>
 
 </html>

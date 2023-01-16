@@ -11,6 +11,7 @@
         <a href="#" onclick="document.getElementById('id01').style.display='block';  return false;" style="width:auto;"><i class="bi bi-box-arrow-in-right" title="Ingresar"></i></a> 
         <!-- <a href="#" title="Salir"><i class="bi bi-box-arrow-in-left"></i></a> -->
         <a href="#" onclick="document.getElementById('id02').style.display='block';  return false;" style="width:auto;" title="Registrar"><i class="bi bi-r-square"></i></a>
+
     </div>
 </div>
 
@@ -20,7 +21,7 @@
     <form class="modal-content animate" action="/action_page.php">
         <div class="imgcontainer">
             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <img src="./assets/img/usuario.png" alt="Avatar" class="avatar">
+            <img [src]="miPortafolio.usuario" alt="Avatar" class="avatar">
         </div>
         <div class="container">
             <div class="row">
@@ -46,15 +47,22 @@
                         <p>O manualmente:</p>
                     </div>
             
-                    <input type="text" name="Nombre de usuario" placeholder="Nombre de usuario" required>
-                    <input type="password" name="Contraseña" placeholder="Contraseña" required>
+                    <form id="miForm" action="action_page.php">
+                        <input type="text" name="Nombre de usuario" placeholder="Nombre de usuario" required>
+                        <input type="password" name="Contraseña" placeholder="Contraseña" required id="myInput">
+                    </form>
+
                     <label>
+                        <button type="button" onclick="limpiarFormulario()" value="Limpiar formulario"> Limpiar todo</button>
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="remember" onclick="myFunction()"> Mostrar contraseña
                         <input type="checkbox" checked="checked" name="remember"> Recuerdame
                     </label>
                 </div>
                 
             </div>
-            
     
             <div class="clearfix"   style="margin: 20px 50px;">
                 <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn signupbtn">Cancelar</button>
@@ -78,17 +86,24 @@
                 <h1>Registrar</h1>
                 <p>Por favor llenar este formulario para crear una cuenta.</p>
                 <hr>
-                <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Ingrese Email" name="email" required>
-        
-                <label for="psw"><b>Contraseña</b></label>
-                <input type="password" placeholder="Ingrese Contraseña" name="psw" required>
-        
-                <label for="psw-repeat"><b>Repeat Password</b></label>
-                <input type="password" placeholder="Repita Contraseña" name="psw-repeat" required>
-            
+
+                <form id="miForm1" action="action_page.php">
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Ingrese Email" name="email" required>
+                    
+                    <label for="psw"><b>Contraseña</b></label>
+                    <input type="password" placeholder="Ingrese Contraseña" name="psw" required id="myInput1">
+
+                    <label for="psw-repeat"><b>Repeat Password</b></label>
+                    <input type="password" placeholder="Repita Contraseña" name="psw-repeat" required  id="myInput2">
+                </form>
             
             <label>
+                <button type="button" onclick="limpiarFormulario()" value="Limpiar formulario"> Limpiar todo</button>
+            </label>
+        
+            <label>
+                <input type="checkbox" name="remember" onclick="myFunction1()"> Mostrar contraseña
                 <input type="checkbox" checked="checked" name="remember"> Recuerdame
             </label>
             <p>Al crear la cuenta esta de acuerdo con los <a href="#" style="color:dodgerblue" >Termino & Condiciones</a>.</p>

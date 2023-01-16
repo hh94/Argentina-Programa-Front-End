@@ -17,32 +17,59 @@
 <div class="containerColumn">
 
     <div class="item1">
-        <h1><u>{{miPortafolio.nombre}}</u></h1>
+        <h1>{{miPortafolio.nombre}} {{miPortafolio.apellido}}</h1>
         
-        <h2>Tu profesion Lorem ipsum dolp</h2>
-        <h2>Acerca de mi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque qui autem ducimus est eius eveniet officia, unde culpa suscipit sint error quasi quam corrupti molestias reiciendis animi consequatur amet quibusdam porro? Neque, eos! Deleniti, incidunt animi amet dolor, unde dicta laudantium mollitia ut eveniet, similique quidem nisi praesentium pariatur? Enim?</h2>
+        <h2>{{miPortafolio.profesion}}</h2>
+        <h2>{{miPortafolio.acerca}}</h2>
     </div>
 
     <!-------------------------------------------contenido------------------------------------->
     
-    <h2 class="item2">Certificados?</h2>
+    <h3 class="item2">Certificados</h3>
     <div class="item6">
-            <p><span>fecha</span> Llooe.</p>
+        <dl *ngFor=" let certificados of certificadoList">
+                
+            <img [src]="certificados.imgLogo" alt="">
+            
+            <dt>
+                <p>{{certificados.titulo}}</p>
+            </dt>
+            <dt>
+                {{certificados.fecha}}
+            </dt>
+            <dt>
+                {{certificados.certificado}}
+            </dt>
+        </dl>
     </div> 
 
-    <h2 class="item3">Otros conocimientos</h2>
+    <h3 class="item3">Otros conocimientos</h3>
     <div class="item7">
-        <p><span>fecha</span> Lorem. Quibusdam nisi deleniti incidunt sit dolore magni.</p>
+        <dl *ngFor=" let otrosConocimientos of otrosConocimientosList">
+            <dt>
+                <p>{{otrosConocimientos.otro}}</p>
+                {{otrosConocimientos.tipo}}
+            </dt>
+        </dl>
     </div>   
 
-    <h2 class="item4">Proyectos</h2>
+    <h3 class="item4">Proyectos</h3>
     <div class="item8">
-        <p><span>fecha</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, optio! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, qui. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa deleniti sed blanditiis eos consequatur odio tenetur corporis dicta. Harum culpa maiores commodi dignissimos aut, eius eum eos minus nobis, sequi adipisci perferendis officiis neque dicta molestias ab sint quaerat rerum odit debitis id. Quibusdam nisi deleniti incidunt sit dolore magni.</p>
+        <dl *ngFor=" let proyectos of proyectosList">
+            <dt>
+                <p>{{proyectos.nombre}}</p>
+                {{proyectos.url}}
+            </dt>
+        </dl>
     </div>  
 
-    <h2 class="item5">Futuros proyectos</h2>
+    <h3 class="item5">Futuros proyectos</h3>
     <div class="item9">
-        <p><span>fecha</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, optio! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, qui. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa deleniti sed blanditiis eos consequatur odio tenetur corporis dicta. Harum culpa maiores commodi dignissimos aut, eius eum eos minus nobis, sequi adipisci perferendis officiis neque dicta molestias ab sint quaerat rerum odit debitis id. Quibusdam nisi deleniti incidunt sit dolore magni.</p>
+        <dl *ngFor=" let futurosProyectos of futurosProyectosList">
+            <dt>
+                <p>{{futurosProyectos.nombre}}</p>
+            </dt>
+        </dl>
     </div>
 
 </div>
