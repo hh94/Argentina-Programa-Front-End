@@ -56,12 +56,12 @@
 <hr>
         
         <div> <a href="" onclick="hide1(); return false;"><i class="bi bi-plus btn-bi"></i></a>
-            <h3>Otros conocimientos</h3>
+            <h3>Habilidades y conocimientos</h3>
             <div  id="hide1">
-                <dl *ngFor=" let otrosConocimientos of otrosConocimientosList">
+                <dl *ngFor=" let habilidadesConocimientos of habilidadesConocimientosList">
                     <dt>
-                        <p>{{otrosConocimientos.otro}}</p>
-                        {{otrosConocimientos.tipo}}
+                        <p>{{habilidadesConocimientos.otro}}</p>
+                        {{habilidadesConocimientos.tipo}}
                     </dt>
                 </dl>
             </div>   

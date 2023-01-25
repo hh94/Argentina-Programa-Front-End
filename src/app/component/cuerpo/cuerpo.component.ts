@@ -10,7 +10,7 @@ import { PortafolioService } from 'src/app/servicios/portafolio.service';
 export class CuerpoComponent implements OnInit {
   miPortafolio:any;
   certificadoList:any;
-  otrosConocimientosList:any;
+  habilidadesConocimientosList:any;
   proyectosList:any;
   futurosProyectosList:any;
   
@@ -22,7 +22,7 @@ export class CuerpoComponent implements OnInit {
           console.log(data);
           this.miPortafolio=data;
           this.certificadoList=data.certificados;
-          this.otrosConocimientosList=data.otrosConocimientos;
+          this.habilidadesConocimientosList=data.habilidadesConocimientos;
           this.proyectosList=data.proyectos;
           this.futurosProyectosList=data.futurosProyectos;
       });
