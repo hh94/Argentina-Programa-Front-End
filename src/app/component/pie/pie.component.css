@@ -13,4 +13,5 @@ div>p{
   }
 i{
   color: var(--text-color);
+  margin: 10px;
 }

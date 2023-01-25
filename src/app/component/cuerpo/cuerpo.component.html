@@ -16,62 +16,85 @@
 
 <div class="containerColumn">
 
-    <div class="item1">
+    <div class=" item1 col1">
         <h1>{{miPortafolio.nombre}} {{miPortafolio.apellido}}</h1>
         
         <h2>{{miPortafolio.profesion}}</h2>
         <h2>{{miPortafolio.acerca}}</h2>
+        <p>
+           <u>Datos de contacto:</u>
+                                <br> Whatsapp: {{miPortafolio.w}}
+                                <br> Mail: {{miPortafolio.m}}
+        </p>
     </div>
 
-    <!-------------------------------------------contenido------------------------------------->
-    
-    <h3 class="item2">Certificados</h3>
-    <div class="item6">
-        <dl *ngFor=" let certificados of certificadoList">
-                
-            <img [src]="certificados.imgLogo" alt="">
-            
-            <dt>
-                <p>{{certificados.titulo}}</p>
-            </dt>
-            <dt>
-                {{certificados.fecha}}
-            </dt>
-            <dt>
-                {{certificados.certificado}}
-            </dt>
-        </dl>
-    </div> 
+<!-------------------------------------------contenido------------------------------------->
+    <div class="item2">
+        
+<hr>
 
-    <h3 class="item3">Otros conocimientos</h3>
-    <div class="item7">
-        <dl *ngFor=" let otrosConocimientos of otrosConocimientosList">
-            <dt>
-                <p>{{otrosConocimientos.otro}}</p>
-                {{otrosConocimientos.tipo}}
-            </dt>
-        </dl>
-    </div>   
+        <div> <a href="" onclick="hide(); return false;"><i class="bi bi-plus btn-bi"></i></a>
+            <h3>Certificados</h3> 
+            <div id="hide">
+                <dl *ngFor=" let certificados of certificadoList">
+                        
+                    <img [src]="certificados.imgLogo" alt="">
+                    
+                    <dt>
+                        <p>{{certificados.titulo}}</p>
+                    </dt>
+                    <dt>
+                        {{certificados.fecha}}
+                    </dt>
+                    <dt>
+                        {{certificados.certificado}}
+                    </dt>
+                </dl>
+            </div> 
 
-    <h3 class="item4">Proyectos</h3>
-    <div class="item8">
-        <dl *ngFor=" let proyectos of proyectosList">
-            <dt>
-                <p>{{proyectos.nombre}}</p>
-                {{proyectos.url}}
-            </dt>
-        </dl>
-    </div>  
+        </div>
+<hr>
+        
+        <div> <a href="" onclick="hide1(); return false;"><i class="bi bi-plus btn-bi"></i></a>
+            <h3>Otros conocimientos</h3>
+            <div  id="hide1">
+                <dl *ngFor=" let otrosConocimientos of otrosConocimientosList">
+                    <dt>
+                        <p>{{otrosConocimientos.otro}}</p>
+                        {{otrosConocimientos.tipo}}
+                    </dt>
+                </dl>
+            </div>   
+        </div>
+<hr>
 
-    <h3 class="item5">Futuros proyectos</h3>
-    <div class="item9">
-        <dl *ngFor=" let futurosProyectos of futurosProyectosList">
-            <dt>
-                <p>{{futurosProyectos.nombre}}</p>
-            </dt>
-        </dl>
+        
+        <div> <a href="" onclick="hide2(); return false;"><i class="bi bi-plus btn-bi"></i></a>
+            <h3>Proyectos</h3>
+            <div  id="hide2">
+                <dl *ngFor=" let proyectos of proyectosList">
+                    <dt>
+                        <p>{{proyectos.nombre}}</p>
+                        {{proyectos.url}}
+                    </dt>
+                </dl>
+            </div>  
+        </div>
+
+<hr>
+        
+        <div> <a href="" onclick="hide3(); return false;"><i class="bi bi-plus btn-bi"></i></a>
+            <h3>Futuros proyectos</h3>
+            <div id="hide3">
+                <dl *ngFor=" let futurosProyectos of futurosProyectosList">
+                    <dt>
+                        <p>{{futurosProyectos.nombre}}</p>
+                    </dt>
+                </dl>
+            </div>
+        </div>
+
+<hr>
     </div>
 
-</div>
-
-
+</div>    

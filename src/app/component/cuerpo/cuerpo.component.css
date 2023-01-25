@@ -11,57 +11,63 @@
     background-color: var(--btn-background-color);
     color: var(--text-color);
   }
-  .btn-mov:active {
-    box-shadow: var(--btn-background-color);
-    transform: translateY(4px);
-  }
-  .btn-mov:hover {
-    background-color: rgba(0, 0, 0, 0.174);
-  }
+  
   .contenedorTB{
     margin:  0% 3% 1% 8%;
     font-size: 20px;
 }
 
+.btn-bi:hover, .btn-mov:hover {
+  background-color: rgba(0, 0, 0, 0.174);
+  box-shadow:  var(--btn-box-shadow-color);
+}
+
+.btn-bi:active, .btn-mov:active {
+  color: var(--colum-container-background-color);
+  transform: translateY(4px);
+}
+/*-----------------------hide*/
+.btn-bi{
+  cursor: pointer;
+  box-shadow: var(--btn-box-shadow-color);
+  padding: 10px;
+  border-radius: 3px;
+  background-color: var(--btn-background-color);
+  color: var(--text-color);
+  border-color: rgba(0, 0, 0, 0);
+float: right;
+margin: 3px;
+}
+
+#hide, #hide1, #hide2, #hide3{
+  margin: 10px;
+}
+
   /*------------------------------------------------------------------------contenido-------------------------------------------------------------------------*/
 
-.item1 { grid-area: aside;}
-.item2 { grid-area: art1;}
-.item3 { grid-area: art2;}
-.item4 { grid-area: art3;}
-.item5 { grid-area: art4;}
-.item6 { grid-area: art5;}
-.item7 { grid-area: art6;}
-.item8 { grid-area: art7;}
-.item9 { grid-area: art8;}
-
-
+  .item1{
+  padding: 5px;
+}
+.item2{
+  padding: 15px;
+}
 .containerColumn {
   display: grid;
-  grid-template-areas:
-      'aside art1 art5 art5 art5'
-      'aside art2 art6 art6 art6'
-      'aside art3 art7 art7 art7'
-      'aside art4 art8 art8 art8';
-  gap: 10px 0px;
+  grid-template-columns: 20% 80%;
   background-color: var(background-color);
-  margin: 0% 4% 0% 2%;
+  margin: 0% 5% 0% 2%;
   color: var(--text-color);
+  gap: 10px;
 }
 
-.containerColumn > div,h1,h2,h3{
+.containerColumn> div{
   background-color: var(--colum-container-background-color);
   border-radius: 3px;
-  padding: 5px 0px;
 }
-.containerColumn > div>h1,h2,h3{
+.col1{
   text-align: center;
 }
-.containerColumn > h3{
-  background-color: var(--colum-container-background-color);
-  margin: 0% 0% 0% 3%;
-  padding: 35px;
-}
+
 img{
   width: 70px;
   height: 70px;

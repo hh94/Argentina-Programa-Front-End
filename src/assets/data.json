@@ -5,13 +5,11 @@
 
     "nombre": "Hiromi Marina",
     "apellido": "Higa",
-    "profesion": "Informatico",
-    "acerca": "soy estudiante",
+    "profesion": "Desarrollador Full Stack",
+    "acerca": "Soy una persona en busca desafios para seguir avanzando y tener la oportunidad para desarrollarme en una empresa. Lo que mas me gusta del area es poder solucionar de la mejor manera los problemas que se presenten. ",
 
-            "m": " Mail: Lorem@gmail.com",
-            "i": " Instagram: Lorem.lol",
-            "f": " Facebook: Loremlol",
-            "w": " Whatsapp: 15-Lorem(56736)-000",
+            "m": " Lorem@gmail.com",
+            "w": " 011-Lorem(56736)-000",
 
     "certificados": [
         {
