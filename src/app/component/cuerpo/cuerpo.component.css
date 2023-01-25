@@ -5,22 +5,19 @@
     position: fixed;
     z-index: 2;
     cursor: pointer;
-    box-shadow: 0 0 15px #666666b9;
+    box-shadow: var(--btn-box-shadow-color);
     padding: 10px;
     border-radius: 3px;
-    background-color: rgba(251, 251, 251, 0.336);
-    color: #000;
+    background-color: var(--btn-background-color);
+    color: var(--text-color);
   }
   .btn-mov:active {
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.686);
+    box-shadow: var(--btn-background-color);
     transform: translateY(4px);
-    color: #f1f1f1;
   }
   .btn-mov:hover {
     background-color: rgba(0, 0, 0, 0.174);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.741);
   }
-
   .contenedorTB{
     margin:  0% 3% 1% 8%;
     font-size: 20px;
@@ -47,12 +44,13 @@
       'aside art3 art7 art7 art7'
       'aside art4 art8 art8 art8';
   gap: 10px 0px;
-  background-color: rgb(213, 213, 213);
+  background-color: var(background-color);
   margin: 0% 4% 0% 2%;
+  color: var(--text-color);
 }
 
 .containerColumn > div,h1,h2,h3{
-  background-color: #f1f1f1;
+  background-color: var(--colum-container-background-color);
   border-radius: 3px;
   padding: 5px 0px;
 }
@@ -60,7 +58,7 @@
   text-align: center;
 }
 .containerColumn > h3{
-  background-color: #f1f1f1;
+  background-color: var(--colum-container-background-color);
   margin: 0% 0% 0% 3%;
   padding: 35px;
 }

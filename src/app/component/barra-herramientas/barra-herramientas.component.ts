@@ -20,4 +20,11 @@ miPortafolio:any;
         this.miPortafolio=data;
     });
   }
+
+
+  toggleDarkTheme(): void {
+    document.body.classList.toggle('dark-theme');
+  }
+
+  
 }

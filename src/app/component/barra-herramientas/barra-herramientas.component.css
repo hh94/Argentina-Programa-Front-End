@@ -7,30 +7,30 @@
     position: sticky;
     top: 0px;
     z-index: 3; /* Sit on top */
-    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.319);
-    background-color: rgba(216, 216, 216, 0.796);
+    box-shadow: var(--btn-box-shadow-color);
+    background-color: var(--btn-background-color);
   }
   
   .icon-bar a {
-    color: #000;
+    color: var(--text-color);
     float: left;
     text-align: center;
     font-size: 30px;
     margin: 10px;
     padding: 8px;
     text-decoration: none; /*para sacar subrayado y otras decoraciones del <a>*/
-    box-shadow: 0px 5px 7px 3px rgba(0, 0, 0, 0.336);
+    box-shadow: var(--btn-box-shadow-color);
     border-radius: 2px;
-    background-color: rgba(251, 251, 251, 0.336);
+    background-color: var(--btn-background-color);
   }
   
   .icon-bar a:hover {
     background-color: rgba(0, 0, 0, 0.174);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.741);
+    box-shadow:  var(--btn-box-shadow-color);
   }
 
   .icon-bar a:active {
-    color: #f1f1f1;
+    color: var(--colum-container-background-color);
   }
   
   /*--------------------------------------------------------logo inicio-----------------------------------------------------------------------------------------------*/
@@ -76,12 +76,12 @@ input[type=text], input[type=password] {
   }
   
   button:hover {
-    opacity: 0.8;
+    opacity: 0.5;
   }
   
   /*---- Extra styles for the cancel button ----*/
   .cancelbtn {
-    background-color: #f44336;
+    background-color:  #f44336;
   }
   
   /*---- Center the image and position the close button ----*/
@@ -99,7 +99,7 @@ input[type=text], input[type=password] {
   .container {
     margin: 50px;
     padding: 16px;
-    box-shadow: 0px 5px 7px 3px rgba(0, 0, 0, 0.336);
+    box-shadow: var(--container-box-shadow-color);
   }
   
   span.psw {
@@ -117,17 +117,17 @@ input[type=text], input[type=password] {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
   
   /*---- Modal Content/Box ----*/
   .modal-content {
-    background-color: #fefefe;
+    background-color: var(--modal-background-color);
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
     width: 70%; /* Could be more or less, depending on screen size */
     border-radius: 3px;
+    color: var(--text-color);
   }
   
   /* Float cancel and signup buttons and add an equal width */
@@ -210,7 +210,7 @@ label>input {
 .container {
   position: relative;
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: var(--container-background-color);
   padding: 20px 0 30px 0;
 } 
 
@@ -291,7 +291,7 @@ input[type=submit]:hover {
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-color: #f1f1f1;
+  background-color: var(--modal-background-color);
   border: 1px solid #ccc;
   border-radius: 50%;
   padding: 8px 10px;
@@ -328,13 +328,13 @@ input[type=submit]:hover {
 
 /* Set a grey background color and center the text of the "sign in" section */
 .signin {
-  background-color: #f1f1f1;
+  background-color: var(--container-background-color);
   text-align: center;
 }
 
 /*---------------------------borrar boton-------------------------*/
 label>button{
-  background-color: #888;
+  background-color: rgb(91, 91, 91);
   width: 100px;
   float: right;
 }
