@@ -47,6 +47,7 @@ margin: 3px;
 
   .item1{
   padding: 5px;
+  min-height: 900px;
 }
 .item2{
   padding: 15px;

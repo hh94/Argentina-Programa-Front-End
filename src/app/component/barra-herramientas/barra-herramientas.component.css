@@ -176,7 +176,7 @@ input[type=text], input[type=password] {
     to {transform: scale(1)}
   }
   
-  /*---- Change styles for span and cancel button on extra small screens ----*/
+  /*---- Change styles for span and cancel button on extra small screens ----------*/
   @media screen and (max-width: 300px) {
     span.psw {
        display: block;
@@ -186,6 +186,7 @@ input[type=text], input[type=password] {
        width: 100%;
     }
   }
+
   /* --------------------------------style inputs y label de recordar checkbox para qeu el texto quede al lado del checkbox----------------------------------------------------- */
 
 label {
