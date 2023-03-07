@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { PortafolioService } from 'src/app/servicios/portafolio.service';
+
+import { Experiencia } from 'src/app/model/experiencia';
+import { SExperienciaService } from 'src/app/service/s-experiencia.service';
+import { TokenService } from 'src/app/service/token.service';
 
 @Component({
   selector: 'app-cuerpo',
@@ -8,23 +11,36 @@ import { PortafolioService } from 'src/app/servicios/portafolio.service';
 })
 
 export class CuerpoComponent implements OnInit {
-  miPortafolio:any;
-  certificadoList:any;
-  habilidadesConocimientosList:any;
-  proyectosList:any;
-  futurosProyectosList:any;
   
-    constructor(private datosPortafolio:PortafolioService) { }
-  
-    ngOnInit(): void {
-  
-      this.datosPortafolio.obtenerDatos().subscribe(data=> {
-          console.log(data);
-          this.miPortafolio=data;
-          this.certificadoList=data.certificados;
-          this.habilidadesConocimientosList=data.habilidadesConocimientos;
-          this.proyectosList=data.proyectos;
-          this.futurosProyectosList=data.futurosProyectos;
-      });
+  expe: Experiencia[] = [];
+
+  constructor( private sExperiencia: SExperienciaService, private tokenService: TokenService) { }
+
+  isLogged = false;
+
+  ngOnInit(): void{
+    this.cargarExperiencia();
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
+
+  }
+
+  cargarExperiencia(): void {
+    this.sExperiencia.lista().subscribe(data => { this.expe = data; })
+  }
+
+  delete(id?: number){
+    if(id != undefined){
+      this.sExperiencia.delete(id).subscribe(
+        data => {
+          this.cargarExperiencia();
+        }, err => {
+          alert("No se pudo borrar");
+        }
+      )
     }
   }
+}

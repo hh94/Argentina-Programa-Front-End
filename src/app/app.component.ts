@@ -8,8 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'portafolio01';
 
-  toggleDarkTheme(): void {
-    document.body.classList.toggle('dark-theme');
-  }
 }
 

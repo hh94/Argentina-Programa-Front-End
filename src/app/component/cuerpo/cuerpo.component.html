@@ -16,23 +16,48 @@
 
 <div class="containerColumn">
 
-    <div class=" item1 col1">
-        <h1>{{miPortafolio.nombre}} {{miPortafolio.apellido}}</h1>
-        
-        <h2>{{miPortafolio.profesion}}</h2>
-        <h2>{{miPortafolio.acerca}}</h2>
-        <p>
-           <u>Datos de contacto:</u>
-                                <br> Whatsapp: {{miPortafolio.w}}
-                                <br> Mail: {{miPortafolio.m}}
-        </p>
-    </div>
-
-<!-------------------------------------------contenido------------------------------------->
     <div class="item2">
         
-<hr>
+            <a href="" onclick="hide(); return false;"><i class="bi bi-eye btn-bi"></i></a>
+            <button style="margin-right: 20px;" class="btn-bi" routerLink="/nuevaexp" *ngIf="isLogged">
+                Nueva Experiencia
+            </button> 
+        
+            <h3>Experiencia</h3>
+        <hr>
+            <div  id="hide">
+                <dl *ngFor=" let Experiencia of expe">
+                    <dt *ngIf="isLogged">
+                                
+                        <button style="margin-left: 15px; padding: 2px;" class="btn-bi" routerLink="editexp/{{Experiencia.id}}">
+                            <i class="bi bi-pencil-fill"></i><h4>EDITAR</h4> 
+                        </button>
+                        
+                        <button style="padding: 2px;"  class="btn-bi" (click)="delete(Experiencia.id)">
+                            <i class="bi bi-trash-fill"></i> <h4>BORRAR</h4>
+                        </button>
+                    </dt>
+                
+                    <dt>
+                        <h2>
+                            {{Experiencia.nombreE}}
+                        </h2>
+                    
+                        <p>
+                            {{Experiencia.descripcionE}}
+                        </p>
+                    </dt>
+                </dl>
+            </div> 
+            <hr>
 
+    </div>
+                            
+
+
+
+
+<!--
         <div> <a href="" onclick="hide(); return false;"><i class="bi bi-plus btn-bi"></i></a>
             <h3>Certificados</h3> 
             <div id="hide">
@@ -96,5 +121,7 @@
 
 <hr>
     </div>
+-->
 
 </div>    
+

@@ -7,11 +7,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-
 <body>
   <app-root></app-root>
-
 <script>
   
 //-------------------------------------------------------js-------------------------------------------->
@@ -20,15 +17,16 @@
   // Get the modal
   var modal = document.getElementById('id01');
   var modal2 = document.getElementById('id02');
-      if (event.target == modal || event.target == modal2 ) {
+      if (event.target == modal || event.target == modal2) {
           modal.style.display = "none";
           modal2.style.display = "none";
       }
+
   })
 
 //--------------------------------------------------password-------------------------------------------------
     function myFunction() {
-      var x = document.getElementById("myInput");
+      var x = document.getElementById("password");
       if (x.type === "password") {
         x.type = "text";
       } else {
@@ -88,7 +86,22 @@ function hide3() {
   }
 }
 
+function hide4() {
+  var x = document.getElementById("hide4");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+
 </script>
+
+
+
+
+
 
 </body>
 

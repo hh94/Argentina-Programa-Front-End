@@ -98,7 +98,7 @@ input[type=text], input[type=password] {
   }
   
   .container {
-    margin: 50px;
+    margin: 20px;
     padding: 16px;
     box-shadow: var(--container-box-shadow-color);
   }
@@ -133,8 +133,8 @@ input[type=text], input[type=password] {
   
   /* Float cancel and signup buttons and add an equal width */
 .signupbtn {
-  float: center;
   width: 50%;
+  min-width: 100px;
 }
 
   /*---- The Close Button (x) ----*/

@@ -3,7 +3,7 @@ body{
     font-family: 'Open Sans', sans-serif;
 
     /*barra herramientas*/
-    --text-color: rgb(18, 18, 18);
+    --text-color: rgb(0, 0, 0);
     --icon-bar-background-color: rgba(216, 216, 216, 0.796);
     --icon-bar-box-shadow-color: 5px 5px 10px 5px rgba(0, 0, 0, 0.319);
 
@@ -22,6 +22,7 @@ body{
     
     /*footer*/
     --footer-background: rgb(199, 199, 199);
+
     
 }
 
@@ -47,7 +48,6 @@ body.dark-theme{
 
     /*footer*/
     --footer-background: rgb(48, 48, 48);
-
 }
 
 

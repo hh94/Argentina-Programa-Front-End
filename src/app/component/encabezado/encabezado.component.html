@@ -1,7 +1,25 @@
 <!-----------------------------------------------cabecera------------------------------------->
 <div class="contenedorE">
-    <img [src]="miPortafolio.logocurso" alt="" class="encabezado">
-    <img [src]="miPortafolio.usuario" alt="usuario.png" class="usuario">
+    <img src={{persona.img}} alt="" class="encabezado">
+    <img src={{persona.imgU}} alt="usuario.png" class="usuario">
+
+    <div class=" item2">
+        <div>
+            <h2>{{persona.nombre}} {{persona.apellido}}</h2>
+            
+            <h3>{{persona.profesion}}</h3>
+
+        </div>
+        <h4>
+            {{persona.sobreTi}} koko
+        </h4>
+
+        <button style="margin-right: 20px;" class="btn-bi" routerLink="edit/12" *ngIf="isLogged">
+            Editar
+        </button> 
+
+        <br>
+    </div>
     
 </div>    
         

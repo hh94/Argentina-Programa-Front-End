@@ -1,0 +1,49 @@
+/*-----------------------hide*/
+.btn-bi{
+    cursor: pointer;
+    box-shadow: var(--btn-box-shadow-color);
+    border-radius: 3px;
+    background-color: var(--btn-background-color);
+    color: var(--text-color);
+    border-color: rgba(0, 0, 0, 0);
+    float: right;
+    padding: 10px;
+    
+  }
+  
+  #hide, #hide1, #hide2, #hide3{
+    margin: 10px;
+  }
+
+
+    /*------------------------------------------------------------------------contenido-------------------------------------------------------------------------*/
+
+.item2{
+    padding: 15px;
+  }
+  .containerColumn {
+    display: grid;
+    grid-template-columns: 100%;
+    background-color: var(background-color);
+    margin: 0% 4% 0% 2%;
+    color: var(--text-color);
+  }
+  
+  .containerColumn> div{
+    background-color: var(--colum-container-background-color);
+    border-radius: 3px;
+  }
+  
+  img{
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-right: 10px;
+  }
+  
+  dt>p{
+    font-size: 20px;
+  }
+  dt>h2,p{
+   text-align: left;
+  }

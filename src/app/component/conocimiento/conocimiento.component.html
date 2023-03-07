@@ -1,0 +1,40 @@
+<div class="containerColumn">
+
+    <div class="item2">
+        
+            <a href="" onclick="hide3(); return false;"><i class="bi bi-eye btn-bi"></i></a>
+
+            <button style="margin-right: 20px;" class="btn-bi" routerLink="/nuevocono" *ngIf="isLogged">
+                Nuevo estudio
+            </button> 
+        
+            <h3>Estudios</h3>
+        <hr>
+            <div  id="hide3">
+                <dl *ngFor=" let Conocimiento of conocimiento">
+                    <dt *ngIf="isLogged">
+                                
+                       <button style="margin-left: 15px; padding: 2px;" class="btn-bi" routerLink="editcono/{{Conocimiento.id}}">
+                            <i class="bi bi-pencil-fill"></i><h4>EDITAR</h4> 
+                        </button>
+                        
+                        <button style="padding: 2px;"  class="btn-bi" (click)="delete(Conocimiento.id)">
+                            <i class="bi bi-trash-fill"></i> <h4>BORRAR</h4>
+                        </button>
+                    </dt>
+                
+                    <dt>
+                        <h2>
+                            {{Conocimiento.nombreE}}
+                        </h2>
+                    
+                        <p>
+                            {{Conocimiento.descripcionE}}
+                        </p>
+                    </dt>
+                </dl>
+            </div> 
+            <hr>
+
+    </div>
+</div>
