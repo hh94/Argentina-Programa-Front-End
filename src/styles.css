@@ -54,3 +54,33 @@ body.dark-theme{
 html{
     scroll-behavior: smooth;
   }
+
+
+  /*-----------------------hide*/
+.btn-bi{
+    cursor: pointer;
+    box-shadow: var(--btn-box-shadow-color);
+    border-radius: 3px;
+    background-color: var(--btn-background-color);
+    color: var(--text-color);
+    border-color: rgba(0, 0, 0, 0);
+    float: right;
+    padding: 10px;
+    margin: 10px;
+    
+  }
+  .btn-bi:hover, .btn-mov:hover {
+    background-color: rgba(0, 0, 0, 0.174);
+    box-shadow:  var(--btn-box-shadow-color);
+  }
+  .btn-bi:active, .btn-mov:active {
+    color: var(--colum-container-background-color);
+    transform: translateY(4px);
+  }
+
+
+  #contenedor{
+    display: inline-block;
+    min-width: 50px;
+    margin: 000 5%;
+  }
