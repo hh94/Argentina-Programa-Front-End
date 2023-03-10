@@ -1,50 +1,74 @@
 
 <div class="containerColumn">
     <div class="item2">
-        <a href="" onclick="hide4(); return false;"><i class="bi bi-eye btn-bi"></i></a>
+
+        <a href="" onclick="hys(); return false;" ><i class="bi bi-eye btn-bi"></i></a>
+
+        <div>
+            <button type="button" class="btn btn-dark" *ngIf="isLogged"  class="btn-bi"  onclick="hys1(); return false;">Nueva Skill</button>
+        </div>
+
+        
+        <div id="hys1" style="float: right; margin: 60px -110px 0 0; display: none;" >
+                <div class="row">
+                        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                            <div class="form-group">
+                                <label for="nombre">Nueva Skill</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="porcentaje">Porcentaje</label>
+                                <textarea cols="161" rows="10"type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="porcentaje" required></textarea>
+                            </div>
+                            <button class="btn-bi" onclick="location.reload();">
+                                Agregar skill
+                            </button>
+                        </form>
+                </div>
+        </div>
 
 
-            <div style="margin-right: 50px;">
-                <button type="button" routerLink="/newskill" class="btn btn-dark" *ngIf="isLogged"  class="btn-bi">Nueva Skill</button>
-            </div>
+
+
         <div class="row">
 
             <h3>Hard & Soft skills</h3>
+            <hr>   
+            <div  id="hys">
+                <div class="text-center col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let skill of skill">
+                    <circle-progress 
+                        [percent]="(skill.porcentaje)"
+                        [radius]="90" [imageSrc]="''" 
+                        [title]="(skill.nombre)"
+                        [titleColor]="'#212F3C'"
+                        [showTitle]="true" 
+                        [showImage]="false" 
+                        [imageHeight]="70" 
+                        [imageWidth]="70" 
+                        [showUnits]="false"
+                        [showSubtitle]="false" 
+                        [outerStrokeWidth]="16" 
+                        [innerStrokeWidth]="2" 
+                        [outerStrokeColor]="'#78C000'"
+                        [innerStrokeColor]="'#C7E596'" 
+                        [animation]="true" 
+                        [animationDuration]="600" >
+                    </circle-progress>
 
 
-            <div class="text-center col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let skill of skill"  id="hide4">
-                <circle-progress 
-                    [percent]="(skill.porcentaje)"
-                    [radius]="90" [imageSrc]="''" 
-                    [title]="(skill.nombre)"
-                    [titleColor]="'#212F3C'"
-                    [showTitle]="true" 
-                    [showImage]="false" 
-                    [imageHeight]="70" 
-                    [imageWidth]="70" 
-                    [showUnits]="false"
-                    [showSubtitle]="false" 
-                    [outerStrokeWidth]="16" 
-                    [innerStrokeWidth]="2" 
-                    [outerStrokeColor]="'#78C000'"
-                    [innerStrokeColor]="'#C7E596'" 
-                    [animation]="true" 
-                    [animationDuration]="600" >
-                </circle-progress>
+                    <div style="float: right;">
+                        <td *ngIf="isLogged">
 
-                <div style="float: right;">
-                    <td *ngIf="isLogged">
-                        <button  style="margin-left: 15px; padding: 2px;"  (click)="delete(skill.id)"  class="btn-bi">
-                            <i class="bi bi-pencil-fill"><h4>BORRAR</h4> </i></button>
-                    </td>
-                    <td *ngIf="isLogged">
-                        <button  style="margin-left: 15px; padding: 2px;"  routerLink="/editskill/{{skill.id}}"  class="btn-bi">
-                            <i class="bi bi-pencil-fill"> <h4>EDITAR</h4></i></button>
-                    </td>
-                </div>
-                
-            </div>
+                            <button style="margin-left: 15px; padding: 2px;" class="btn-bi" routerLink="editskill/{{skill.id}}">
+                                <i class="bi bi-pencil-fill"></i><h4>EDITAR</h4> 
+                            </button>
+
+                            <button  style="margin-left: 15px; padding: 2px;"  (click)="delete(skill.id)"  class="btn-bi">
+                                <i class="bi bi-trash-fill"><h4>BORRAR</h4> </i></button>
+                        </td>
+                    </div>
+                </div>                 
         </div>
 
-    </div>    
+    </div>    <hr>   
 </div>    

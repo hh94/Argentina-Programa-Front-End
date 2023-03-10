@@ -1,20 +1,5 @@
-/*-----------------------hide*/
-.btn-bi{
-    cursor: pointer;
-    box-shadow: var(--btn-box-shadow-color);
-    border-radius: 3px;
-    background-color: var(--btn-background-color);
-    color: var(--text-color);
-    border-color: rgba(0, 0, 0, 0);
-    float: right;
-    padding: 10px;
-    
-  }
-  
-  #hide, #hide1, #hide2, #hide3{
-    margin: 10px;
-  }
 
+  
 
     /*------------------------------------------------------------------------contenido-------------------------------------------------------------------------*/
 
@@ -47,3 +32,16 @@
   dt>h2,p{
    text-align: left;
   }
+
+
+  .circulo { /*modificar el alineamiento del texto y los márgenes atomáticos.*/
+    border: 1px;
+    display: inline-block;
+    width: auto;
+    margin: auto;
+    text-align: left;
+ }
+
+ #hys{
+  margin: 0 0 0 50px ;
+}

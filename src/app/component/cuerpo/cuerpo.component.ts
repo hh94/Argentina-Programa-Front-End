@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Experiencia } from 'src/app/model/experiencia';
 import { SExperienciaService } from 'src/app/service/s-experiencia.service';
 import { TokenService } from 'src/app/service/token.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cuerpo',
@@ -13,8 +14,15 @@ import { TokenService } from 'src/app/service/token.service';
 export class CuerpoComponent implements OnInit {
   
   expe: Experiencia[] = [];
+  
+  nombreE: string = '';
+  descripcionE: string = '';
 
-  constructor( private sExperiencia: SExperienciaService, private tokenService: TokenService) { }
+  constructor( 
+              private sExperiencia: SExperienciaService, 
+              private tokenService: TokenService,
+              private router: Router
+              ) { }
 
   isLogged = false;
 
@@ -26,6 +34,20 @@ export class CuerpoComponent implements OnInit {
       this.isLogged = false;
     }
 
+  }
+
+
+  onCreate(): void {
+    const expe = new Experiencia(this.nombreE, this.descripcionE);
+    this.sExperiencia.save(expe).subscribe(
+      data => {
+        alert("añadida");
+        this.router.navigate(['']);
+      }, err => {
+        alert("Falló");
+        this.router.navigate(['']);
+      }
+    )
   }
 
   cargarExperiencia(): void {

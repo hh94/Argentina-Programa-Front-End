@@ -1,17 +1,38 @@
 
 <div class="containerColumn">
-
     <div class="item2">
         
-            <a href="" onclick="hide2(); return false;"><i class="bi bi-eye btn-bi"></i></a>
+            <a href="" onclick="pro(); return false;"><i class="bi bi-eye btn-bi"></i></a>
 
-            <button style="margin-right: 20px;" class="btn-bi" routerLink="/nuevopro" *ngIf="isLogged" > 
+            <button style="margin-right: 20px;" class="btn-bi" *ngIf="isLogged"  onclick="pro1(); return false;"> 
                 Nuevo Proyecto
             </button> 
-        
+
+        <div class="containerColumn">
+            <div id="pro1"  style="float: right; margin: 60px -110px 0 0; display: none;" >
+                <div class="row">
+                        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+            
+                                <label for="nombreE">Nombre del proyecto</label>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="nombreE" [(ngModel)]="nombreE" required>
+                            </div>
+                                <label for="descripcionE">Descripcion del proyecto</label>
+                            <div class="form-group">
+                                <textarea cols="161" rows="10" type="text" class="form-control tam" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required></textarea>
+                            </div>
+                            
+                            <button class="btn-bi"  onclick="location.reload();">
+                                Agregar Proyecto
+                            </button>
+                        </form>
+                </div>
+            </div>
+        </div>
+
             <h3>Proyectos</h3>
         <hr>
-            <div  id="hide2">
+            <div  id="pro">
                 <dl *ngFor=" let Proyecto of proye">
                     <dt *ngIf="isLogged">
                                 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Conocimiento } from 'src/app/model/conocimiento';
 import { ConocimientoService } from 'src/app/service/conocimiento.service';
 import { TokenService } from 'src/app/service/token.service';
@@ -14,7 +15,13 @@ export class ConocimientoComponent implements OnInit {
 
   conocimiento: Conocimiento[] = [];
 
-  constructor( private sConocimiento: ConocimientoService, private tokenService: TokenService) { }
+  nombreE: string = '';
+  descripcionE: string = '';
+
+  constructor( 
+              private sConocimiento: ConocimientoService, 
+              private router: Router,  
+              private tokenService: TokenService) { }
 
   isLogged = false;
 
@@ -26,6 +33,19 @@ export class ConocimientoComponent implements OnInit {
       this.isLogged = false;
     }
 
+  }
+
+  onCreate(): void {
+    const expe = new Conocimiento(this.nombreE, this.descripcionE);
+    this.sConocimiento.save(expe).subscribe(
+      data => {
+        alert("añadida");
+        this.router.navigate(['']);
+      }, err => {
+        alert("Falló");
+        this.router.navigate(['']);
+      }
+    )
   }
 
   cargaConocimiento(): void {

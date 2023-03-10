@@ -18,14 +18,40 @@
 
     <div class="item2">
         
-            <a href="" onclick="hide(); return false;"><i class="bi bi-eye btn-bi"></i></a>
-            <button style="margin-right: 20px;" class="btn-bi" routerLink="/nuevaexp" *ngIf="isLogged">
+            <a href="" onclick="exp(); return false;"><i class="bi bi-eye btn-bi"></i></a>
+
+            <button style="margin-right: 20px;" class="btn-bi" onclick="exp1(); return false;" *ngIf="isLogged">
                 Nueva Experiencia
             </button> 
+
+            
+        <div class="containerColumn">
+            <div id="exp1" style="float: right; margin: 60px -110px 0 0; display: none;" >
+                <div class="row">
+                    
+                        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+            
+                            <label for="nombreE">Nombre de la experiencia</label>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="nombreE" [(ngModel)]="nombreE" required>
+                            </div>
+                                <label for="descripcionE">Descripcion de la experiencia</label>
+                            <div class="form-group">
+                                <textarea cols="155" rows="10" type="text" class="form-control tam" name="descripcionE" [(ngModel)]="descripcionE" required></textarea>
+                            </div>
+                            <button class="btn-bi" style="margin-right: -50px;" onclick="location.reload();">
+                                Agregar experiencia
+                            </button>
+                        </form>
+                        
+                </div>
+            </div>
+        </div>
+            
         
             <h3>Experiencia</h3>
         <hr>
-            <div  id="hide">
+            <div id="exp">
                 <dl *ngFor=" let Experiencia of expe">
                     <dt *ngIf="isLogged">
                                 

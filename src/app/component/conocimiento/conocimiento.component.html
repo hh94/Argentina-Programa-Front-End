@@ -2,15 +2,38 @@
 
     <div class="item2">
         
-            <a href="" onclick="hide3(); return false;"><i class="bi bi-eye btn-bi"></i></a>
+            <a href="" onclick="est(); return false;"><i class="bi bi-eye btn-bi"></i></a>
 
-            <button style="margin-right: 20px;" class="btn-bi" routerLink="/nuevocono" *ngIf="isLogged">
+            <button style="margin-right: 20px;" class="btn-bi" *ngIf="isLogged"  onclick="est1(); return false;">
                 Nuevo estudio
             </button> 
+
+        <div class="containerColumn">
+            <div id="est1" style="float: right; margin: 60px -110px 0 0; display: none;" >
+                <div class="row">
+                        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+            
+                            <label for="nombreE">Titulo del estudio</label>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="nombreE" [(ngModel)]="nombreE" required>
+                            </div>
+                                <label for="descripcionE">Descripcion del estudio</label>
+                            <div class="form-group">
+                                <textarea cols="161" rows="10" type="text" class="form-control tam" name="descripcionE" [(ngModel)]="descripcionE" required></textarea>
+                            </div>
+                            
+                            <button class="btn-bi" style="margin-right: -20px;" onclick="location.reload()">
+                                Agregar Estudio
+                            </button>
+                        </form>
+                </div>
+            </div>
+        </div>
+
         
             <h3>Estudios</h3>
         <hr>
-            <div  id="hide3">
+            <div  id="est">
                 <dl *ngFor=" let Conocimiento of conocimiento">
                     <dt *ngIf="isLogged">
                                 
@@ -34,7 +57,7 @@
                     </dt>
                 </dl>
             </div> 
-            <hr>
+        <hr>
 
     </div>
 </div>

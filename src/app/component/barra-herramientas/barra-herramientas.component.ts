@@ -4,6 +4,7 @@ import { LoginUsuario } from 'src/app/model/login-usuario';
 import { AuthService } from 'src/app/service/auth.service';
 import { TokenService } from 'src/app/service/token.service';
 
+
 @Component({
   selector: 'app-barra-herramientas',
   templateUrl: './barra-herramientas.component.html',
@@ -74,3 +75,4 @@ export class BarraHerramientasComponent implements OnInit {
 
   
 }
+

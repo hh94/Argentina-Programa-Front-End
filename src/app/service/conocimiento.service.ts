@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class ConocimientoService {
 
-  expURL =   environment.URL +  'conocimiento/';
+  expURL =  environment.URL + '/conocimiento/';
 
   constructor(private httpClient: HttpClient) { }
 

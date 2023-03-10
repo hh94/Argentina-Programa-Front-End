@@ -9,7 +9,8 @@ import { Skill } from '../model/skill';
   providedIn: 'root'
 })
 export class SkillService {
-  URL = environment.URL + 'skill/';
+  
+  URL = environment.URL + '/skill/';
   
   constructor(private httpClient: HttpClient) { }
 
@@ -33,3 +34,5 @@ export class SkillService {
     return this.httpClient.delete(this.URL + `delete/${id}`);
   }
 }
+
+

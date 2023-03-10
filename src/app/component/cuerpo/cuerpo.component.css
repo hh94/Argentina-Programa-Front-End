@@ -26,22 +26,6 @@
   color: var(--colum-container-background-color);
   transform: translateY(4px);
 }
-/*-----------------------hide*/
-.btn-bi{
-  cursor: pointer;
-  box-shadow: var(--btn-box-shadow-color);
-  border-radius: 3px;
-  background-color: var(--btn-background-color);
-  color: var(--text-color);
-  border-color: rgba(0, 0, 0, 0);
-  float: right;
-  padding: 10px;
-  
-}
-
-#hide, #hide1, #hide2, #hide3{
-  margin: 10px;
-}
 
   /*------------------------------------------------------------------------contenido-------------------------------------------------------------------------*/
 
@@ -73,4 +57,11 @@ dt>p{
 }
 dt>h2,p{
  text-align: left;
+}
+
+
+#exp{
+  margin: 0 0 0 50px ;
+}  #exp1{
+  margin: 200px 0 0 ;
 }

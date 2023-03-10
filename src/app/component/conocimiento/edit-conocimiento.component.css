@@ -21,16 +21,7 @@ input{
     height: 300px;
 
 }
-.btn-bi{
-    cursor: pointer;
-    box-shadow: var(--btn-box-shadow-color);
-    border-radius: 3px;
-    background-color: var(--btn-background-color);
-    color: var(--text-color);
-    border-color: rgba(0, 0, 0, 0);
-    float: right;
-    padding: 10px; 
-  }
+
   textarea{
     font-size: 30px;
     width: 1200px;

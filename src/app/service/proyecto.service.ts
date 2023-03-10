@@ -9,12 +9,12 @@ import { environment } from 'src/environments/environment';
 })
 export class ProyectoService {
 
-  expURL =   environment.URL +   'proyecto/';
+  expURL =  environment.URL + '/proyecto/';
 
   constructor(private httpClient: HttpClient) { }
 
   public lista(): Observable<Proyecto[]>{
-    return this.httpClient.get<Proyecto[]>(this.expURL + 'lista');
+    return this.httpClient.get<Proyecto[]>(this.expURL + 'lista/');
   }
 
   public detail(id: number): Observable<Proyecto>{

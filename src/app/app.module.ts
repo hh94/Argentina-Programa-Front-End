@@ -14,24 +14,17 @@ import { HomeComponent } from './component/home/home.component';
 
 import { FormsModule } from '@angular/forms';
 import { interceptorProvider } from './service/interceptor-service';
-import { NewExperienciaComponent } from './component/cuerpo/new-experiencia.component';
 import { EditExperienciaComponent } from './component/cuerpo/edit-experiencia.component';
 import { ProyectosComponent } from './component/proyectos/proyectos.component';
-import { NewProyectoComponent } from './component/proyectos/new-proyecto.component';
 import { EditProyectoComponent } from './component/proyectos/edit-proyecto.component';
 import { ConocimientoComponent } from './component/conocimiento/conocimiento.component';
-import { NewConocimientoComponent } from './component/conocimiento/new-conocimiento.component';
 import { EditConocimientoComponent } from './component/conocimiento/edit-conocimiento.component';
-import { HysComponent } from './component/hys/hys.component';
 import { EditSkillComponent } from './component/hys/edit-skill.component';
-import { NewSkillComponent } from './component/hys/new-skill.component';
-
-
+import { HysComponent } from './component/hys/hys.component';
 
 // Import ng-circle-progress
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { EncabezadoComponent } from './component/encabezado/encabezado.component';
-import { EditAcercaDeComponent } from './component/encabezado/edit-acerca-de.component';
 
 
 
@@ -43,18 +36,13 @@ import { EditAcercaDeComponent } from './component/encabezado/edit-acerca-de.com
     CuerpoComponent,
     PieComponent,
     HomeComponent,
-    NewExperienciaComponent,
     EditExperienciaComponent,
     ProyectosComponent,
-    NewProyectoComponent,
     EditProyectoComponent,
     ConocimientoComponent,
-    NewConocimientoComponent,
     EditConocimientoComponent,
-    HysComponent,
     EditSkillComponent,
-    NewSkillComponent,
-    EditAcercaDeComponent
+    HysComponent
     
   ],
   imports: [
@@ -73,7 +61,9 @@ import { EditAcercaDeComponent } from './component/encabezado/edit-acerca-de.com
         outerStrokeColor: "#78C000",
         innerStrokeColor: "#C7E596",
         animationDuration: 300,
-        })
+        }),
+ //        provideFirebaseApp(() => initializeApp(environment.firebase)),
+  //       provideStorage(() => getStorage())
       
 
   ],

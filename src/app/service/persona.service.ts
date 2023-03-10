@@ -12,7 +12,7 @@ export class PersonaService {
   getPersona() {
     throw new Error('Method not implemented.');
   }
-  URL = environment.URL + 'personas/';
+  URL = environment.URL + '/personas/';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -23,11 +23,11 @@ export class PersonaService {
   public detail(id: number): Observable<persona>{
     return this.httpClient.get<persona>(this.URL + `detail/${id}`);
   } 
-/*
-  public save(conocimiento: Conocimiento): Observable<any>{
-    return this.httpClient.post<any>(this.expURL + 'create', conocimiento);
+
+  public save(Persona: persona): Observable<any>{
+    return this.httpClient.post<any>(this.URL + 'create', Persona);
   }
-*/
+
   public update(id: number, Persona: persona): Observable<any>{
     return this.httpClient.put<any>(this.URL + `update/${id}`, Persona);
   }

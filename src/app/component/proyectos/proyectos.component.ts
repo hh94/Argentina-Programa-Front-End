@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Proyecto } from 'src/app/model/proyecto';
 import { ProyectoService } from 'src/app/service/proyecto.service';
 import { TokenService } from 'src/app/service/token.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-proyectos',
@@ -13,7 +14,13 @@ export class ProyectosComponent implements OnInit {
 
   proye: Proyecto[] = [];
 
-  constructor( private sProyecto: ProyectoService , private tokenService: TokenService) { }
+  nombreE: string = '';
+  descripcionE: string = '';
+
+  constructor( 
+              private sProyecto: ProyectoService , 
+              private tokenService: TokenService, 
+              private router: Router) { }
 
   isLogged = false;
 
@@ -24,7 +31,19 @@ export class ProyectosComponent implements OnInit {
     } else {
       this.isLogged = false;
     }
+  }
 
+  onCreate(): void {
+    const proyecto = new Proyecto(this.nombreE, this.descripcionE);
+    this.sProyecto.save(proyecto).subscribe(
+      data => {
+        alert("Proyecto añadida");
+        this.router.navigate(['']);
+      }, err => {
+        alert("Falló");
+        this.router.navigate(['']);
+      }
+    )
   }
 
   cargarProyecto(): void {

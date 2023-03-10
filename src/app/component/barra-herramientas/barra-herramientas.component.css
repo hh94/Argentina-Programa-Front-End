@@ -203,7 +203,7 @@ label>input {
   vertical-align: bottom;
   position: relative;
   top: -1px;
-  *overflow: hidden;
+  overflow: hidden;
 }
 
 /* ----------------------------------------------------------------------style inputs and link buttons----------------------------------------------------- */
